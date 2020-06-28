@@ -20,6 +20,7 @@ function App(){
     if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } 
   }
   let from = ( currentPage - 1 ) * postsPerPage;
+  let upTo = from + postsPerPage;
 
   return (
     <div>
