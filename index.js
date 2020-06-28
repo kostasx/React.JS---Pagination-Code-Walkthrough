@@ -1,6 +1,9 @@
 import React from 'react';            // We import the React library in order to code in JSX
 import { render } from 'react-dom';   // The render method will put our JSX in the HTML page: index.html
 
+// Create a basic list of programming languages
+const list = [ "JavaScript", "TypeScript", "CoffeeScript", "PHP", "Python", "Go", "Ruby", "Java", "C#", "C++" ];
+
 // Our main Application Container Component
 function App(){
   return (
