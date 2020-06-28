@@ -7,6 +7,8 @@ function Post({ title }){
   return <div>{ title }</div>;  
 }
 
+const postsPerPage = 3; // Adding variable which holds the "number of Posts to be displayed per Page" setting
+
 function App(){
   const [ posts ] = useState( list ); 
   const prev = ()=>{
