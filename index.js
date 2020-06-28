@@ -12,10 +12,15 @@ function Post({ title }){
 // Our main Application Container Component
 function App(){
   const [ posts ] = useState( list ); // We create a state variable and assign an initial value: list
+  const prev = ()=>{
+  }
+  const next = ()=>{
+
+  }
   return (
     <div>
       {/* Creating Next & Previous buttons along with a current page indicator */}
-      <button>Prev</button> <span>1/4</span> <button>Next</button>
+      <button onClick={ prev }>Prev</button> <span>1/4</span> <button onClick={ next }>Next</button>
       <hr/>
       {
         posts.map( ( post, index ) => <Post key={ index } title={ post } /> ) /* Pass each list value to the Component as a Prop */
