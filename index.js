@@ -7,3 +7,5 @@ function App(){
     <div>App</div>
   )
 }
+
+render( <App/>, document.getElementById("root") ); // Render our App Component to the index.html page
