@@ -14,6 +14,7 @@ function App(){
   const [ posts ] = useState( list ); 
   const [ currentPage, setCurrentPage ]= useState( 1 );
   const prev = ()=>{
+    if ( currentPage > 1 ){ setCurrentPage( currentPage - 1 ); }
   }
   const next = ()=>{
     if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); }
