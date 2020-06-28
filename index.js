@@ -19,14 +19,15 @@ function App(){
   const next = ()=>{
     if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } 
   }
-  let from = ( currentPage - 1 ) * postsPerPage;
-  let upTo = from + postsPerPage;
+  let from = ( currentPage - 1 ) * postsPerPage; // Start slicing from here
+  let upTo = from + postsPerPage;                // Stop slicing here
 
   return (
     <div>
       <button onClick={ prev }>Prev</button> <span>{currentPage}/{totalPages}</span> <button onClick={ next }>Next</button>
       <hr/>
       {
+        /* Slicing the posts array using the 'from'/'upTo' lower/upper limits: */
         posts.slice( from, upTo ).map( ( post, index ) => <Post key={ index } title={ post } /> ) 
       }
     </div>
