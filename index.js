@@ -19,6 +19,8 @@ function App(){
   const next = ()=>{
     if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } 
   }
+  let from = ( currentPage - 1 ) * postsPerPage;
+
   return (
     <div>
       <button onClick={ prev }>Prev</button> <span>{currentPage}/{totalPages}</span> <button onClick={ next }>Next</button>
