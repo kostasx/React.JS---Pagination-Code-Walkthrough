@@ -1,3 +1,17 @@
+/*
+
+NEXT STEPS?
+
+- Create a Pagination Component
+- Change the way the available Pages are being displayed:
+    - Instead of: PREV 1/4 NEXT
+    - Display this: 1 2 3 4
+        - Don't forget to highlight the currently selected page
+- Implement Tests and test with different `list` lengths and values for `postsPerPage`
+- Load the posts from an external Server using Ajax
+- Apply styling using Bootstrap 4
+
+*/
 import React, { useState } from 'react';            
 import { render } from 'react-dom';   
 
