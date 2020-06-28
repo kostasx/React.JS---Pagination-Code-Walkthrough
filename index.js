@@ -27,7 +27,7 @@ function App(){
       <button onClick={ prev }>Prev</button> <span>{currentPage}/{totalPages}</span> <button onClick={ next }>Next</button>
       <hr/>
       {
-        posts.map( ( post, index ) => <Post key={ index } title={ post } /> ) 
+        posts.slice( from, upTo ).map( ( post, index ) => <Post key={ index } title={ post } /> ) 
       }
     </div>
   )
