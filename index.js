@@ -8,6 +8,7 @@ function Post({ title }){
 }
 
 const postsPerPage = 3; // Adding variable which holds the "number of Posts to be displayed per Page" setting
+const totalPages = Math.ceil( list.length / postsPerPage ); // Calculating the total number of Pages. Play around with the postsPerPage variable at this stage
 
 function App(){
   const [ posts ] = useState( list ); 
@@ -18,7 +19,8 @@ function App(){
   }
   return (
     <div>
-      <button onClick={ prev }>Prev</button> <span>1/4</span> <button onClick={ next }>Next</button>
+      {/* Replacing hardcoded value with dynamic one: */}
+      <button onClick={ prev }>Prev</button> <span>1/{totalPages}</span> <button onClick={ next }>Next</button>
       <hr/>
       {
         posts.map( ( post, index ) => <Post key={ index } title={ post } /> ) 
