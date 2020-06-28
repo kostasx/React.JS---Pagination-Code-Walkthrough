@@ -12,6 +12,7 @@ const totalPages = Math.ceil( list.length / postsPerPage ); // Calculating the t
 
 function App(){
   const [ posts ] = useState( list ); 
+  const [ currentPage, setCurrentPage ]= useState( 1 );
   const prev = ()=>{
   }
   const next = ()=>{
@@ -20,7 +21,7 @@ function App(){
   return (
     <div>
       {/* Replacing hardcoded value with dynamic one: */}
-      <button onClick={ prev }>Prev</button> <span>1/{totalPages}</span> <button onClick={ next }>Next</button>
+      <button onClick={ prev }>Prev</button> <span>{currentPage}/{totalPages}</span> <button onClick={ next }>Next</button>
       <hr/>
       {
         posts.map( ( post, index ) => <Post key={ index } title={ post } /> ) 
