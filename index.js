@@ -16,7 +16,7 @@ function App(){
   const prev = ()=>{
   }
   const next = ()=>{
-
+    if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); }
   }
   return (
     <div>
