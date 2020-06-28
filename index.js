@@ -13,7 +13,11 @@ function Post(){
 function App(){
   const [ posts ] = useState( list ); // We create a state variable and assign an initial value: list
   return (
-    <div>App</div>
+    <div>
+      {
+        posts.map( ( post, index ) => <Post key={ index } /> ) /* Iterate over the posts variable and display the Post Component*/
+      }
+    </div>
   )
 }
 
