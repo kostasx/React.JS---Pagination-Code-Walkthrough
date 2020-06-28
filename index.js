@@ -7,21 +7,20 @@ function Post({ title }){
   return <div>{ title }</div>;  
 }
 
-const postsPerPage = 3; // Adding variable which holds the "number of Posts to be displayed per Page" setting
-const totalPages = Math.ceil( list.length / postsPerPage ); // Calculating the total number of Pages. Play around with the postsPerPage variable at this stage
+const postsPerPage = 3; 
+const totalPages = Math.ceil( list.length / postsPerPage ); 
 
 function App(){
   const [ posts ] = useState( list ); 
   const [ currentPage, setCurrentPage ]= useState( 1 );
   const prev = ()=>{
-    if ( currentPage > 1 ){ setCurrentPage( currentPage - 1 ); } // Decrementing current page index ensuring we don't get past 0
+    if ( currentPage > 1 ){ setCurrentPage( currentPage - 1 ); } 
   }
   const next = ()=>{
-    if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } // Incrementing current page index ensuring we don't get past the upper limit: totalPages
+    if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } 
   }
   return (
     <div>
-      {/* Replacing hardcoded value with dynamic one: */}
       <button onClick={ prev }>Prev</button> <span>{currentPage}/{totalPages}</span> <button onClick={ next }>Next</button>
       <hr/>
       {
