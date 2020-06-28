@@ -14,10 +14,10 @@ function App(){
   const [ posts ] = useState( list ); 
   const [ currentPage, setCurrentPage ]= useState( 1 );
   const prev = ()=>{
-    if ( currentPage > 1 ){ setCurrentPage( currentPage - 1 ); }
+    if ( currentPage > 1 ){ setCurrentPage( currentPage - 1 ); } // Decrementing current page index ensuring we don't get past 0
   }
   const next = ()=>{
-    if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); }
+    if ( currentPage < totalPages ){ setCurrentPage( currentPage + 1 ); } // Incrementing current page index ensuring we don't get past the upper limit: totalPages
   }
   return (
     <div>
